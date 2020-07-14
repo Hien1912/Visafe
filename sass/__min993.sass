@@ -1,0 +1,74 @@
+.navbar
+    .navbar__nav
+        flex: 0 1 880px
+        grid-template-areas: 'nav1 nav2 nav3 nav4 nav5 nav6'
+        // grid-gap: auto
+    .nav--drop
+        position: relative
+        z-index: 990
+        .nav__title
+            height: 30px
+            margin-top: 10px
+        ul
+            color: #ffffff
+            display: none
+            position: absolute
+            z-index: 990
+            width: max-content
+            background-color: $main-color
+            padding: 0
+            top: 20px
+            border-radius: 5px
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .3)
+            animation: opacity 1s
+            li
+                margin: 20px
+
+
+
+.section-solution
+    padding: 90px 0
+    .solution
+        grid-template-areas: 'img content'
+        grid-gap: 30px
+        justify-content: center
+        align-items: center
+    .solution-img
+    
+    .solution-content
+    
+    .solution--slogan
+        font-size: 30px
+    
+    .insure
+        margin-left: 52px
+        max-width: 550px
+        h4
+            font-size: 22px
+        span
+            font-size: 16px
+
+
+.footer
+    height: 100%
+    margin: 44px auto
+    grid-template-areas: 'info about driver user support'
+    grid-gap: 15px
+    justify-content: center
+    align-items: stretch
+    justify-items: center
+    align-content: center
+    .footer-info
+        position: relative
+        .group--app
+            position: absolute
+            width: 320px
+            justify-content: space-between
+            display: flex
+
+
+
+
+@media screen and ( min-width:  1024px)
+    .footer
+        grid-gap: 20px

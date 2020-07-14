@@ -1,0 +1,160 @@
+.container
+    max-width: 720px
+
+.section-banner
+    height: 500px
+    .banner
+        padding-top: 160px
+        .banner__slogan
+            font-size: 30px
+.slogan
+    font-size: 28px 
+
+
+@media screen and ( min-width: 577px )
+    .navbar
+        position: relative
+        z-index: 990
+        .navbar__toggle
+            display: block
+        .navbar__nav
+            padding: 30px
+            border-radius: 5px
+            width: 100%
+            color: #ffffff
+            display: none
+            position: absolute
+            z-index: 90
+            top: 80px
+            left: 50%
+            transform: translateX(-50%)
+            grid-template-areas: 'nav1 nav2 nav3' 'nav4 nav5 nav6'
+            justify-content: space-around
+            align-items: stretch
+            background-color: $main-color
+            animation: opacity 1s
+            grid-gap: 30px
+            box-shadow: 0 1000px 0 1000px rgba(0, 0, 0, .3)
+            &:active,&:focus,&:hover
+                display: grid
+                animation: none
+        
+        .nav--support, .nav--contact
+            align-self: center
+        
+        .nav--button
+            background-image: none
+            background-color: #ffffff
+            color: $main-color
+            width: 100%
+            min-width: 158px
+
+        .nav--drop
+            height: fit-content
+            position: relative
+            z-index: 990
+            ul
+                color: #ffffff
+                display: none
+                position: static
+                left: 100%
+                width: max-content
+                padding-left: 15px
+                li
+                    margin: 20px 0px
+
+
+
+
+
+
+.section-intro
+    padding: 60px 0
+    .intro-header
+        max-width: 570px
+
+    .intro-card
+        grid-template-areas: 'card1 card2' 'card3 card4' 'card5 card6'
+        grid-gap: 15px
+        .card
+            width: 270px
+            height: 380px
+            .card__img
+                height: 254px
+                img
+                    display: block
+                    width: 190px
+            .card__text
+                height: 126px
+                margin-top: 40px
+                font-size: 16px
+
+    .intro--slogan
+        font-size: 25px
+
+.section-solution
+    padding: 80px 0
+    .solution
+        grid-template-areas: 'img' 'content'
+        grid-gap: 40px
+        justify-content: center
+        align-items: center
+    .solution-img
+        margin: auto
+        img
+            max-width: 375px
+    .solution-content
+    
+    .solution--slogan
+        margin-bottom: 40px
+        font-size: 26px
+    
+    .insure
+        margin: auto
+        max-width: 480px
+        margin-left: 45px
+        h4
+            font-size: 18px
+        span
+            margin-top: 10px
+            font-size: 14px
+    .insure-item:before
+        width: 22px 
+        height: 22px
+        left: -30px
+    .item--mid
+        margin-top: 20px
+        margin-bottom: 20px
+
+
+
+.footer
+    height: 100%
+    margin: 44px auto
+    grid-template-areas: 'info info' 'about driver' 'user support'
+    grid-gap: 30px
+    justify-content: center
+    align-items: stretch
+    justify-items: center
+    align-content: center
+    .footer-info
+        width: 100%
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        hr
+            display: none
+        .group--info
+            flex: 1 1 auto
+        .group--app
+            flex: 1 0 100px
+        
+    .about-us, .driver, .user, .support-center
+        text-align: center
+        .group, a
+            margin-left: auto
+            margin-right: auto
+        hr
+            margin-left: auto
+    .group--social
+        display: flex

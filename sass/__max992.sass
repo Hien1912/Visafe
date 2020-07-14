@@ -1,0 +1,156 @@
+.container 
+    max-width: 960px
+
+.topbar-info
+    flex: 0 1 40% !important
+    min-width: 260px
+    max-width: 300px
+    .contact, .vertical-line.first
+        display: none !important
+
+@media screen and ( min-width: 769px )
+    .navbar
+        position: relative
+        z-index: 990
+        .navbar__toggle
+            display: block
+        .navbar__nav
+            padding: 30px
+            border-radius: 5px
+            width: 100%
+            color: #ffffff
+            display: none
+            position: absolute
+            z-index: 90
+            top: 80px
+            left: 50%
+            transform: translateX(-50%)
+            grid-template-areas: 'nav1 nav2 nav3' 'nav4 nav5 nav6'
+            justify-content: center
+            align-items: stretch
+            background-color: $main-color
+            animation: opacity 1s
+            grid-gap: 30px
+            grid-row-gap: 1px
+            box-shadow: 0 1000px 0 1000px rgba(0, 0, 0, .3)
+            &:active,&:focus,&:hover,&.show
+                display: grid
+                animation: none
+        
+        .nav--support, .nav--contact
+            align-self: center
+        
+        .nav--button
+            background-image: none
+            background-color: #ffffff
+            color: $main-color
+
+        .nav--drop
+            position: relative
+            z-index: 990
+            .nav__title
+                cursor: not-allowed
+                &::after
+                    content: ''
+            ul
+                color: #ffffff
+                display: block
+                position: static
+                width: max-content
+                padding: 0
+                li
+                    margin: 20px 0px
+        
+            &:hover,&:active,&:focus
+                .nav__title::after
+                    content: ""
+            
+            
+
+
+.section-banner
+    height: 600px
+    .banner
+        padding-top: 200px
+        &__slogan
+            font-size: 35px
+
+
+
+.section-intro
+    .intro-header
+        max-width: 660px
+    .intro-card
+        grid-template-areas: 'card1 card2' 'card3 card4' 'card5 card6'
+        justify-content: center
+        grid-gap: 20px
+        .card
+            overflow: hidden
+            width: 320px
+            height: 420px
+            .card__img
+                height: 300px
+            .card__text
+                height: 120px
+                margin-top: 30px
+                font-size: 18px
+
+    .intro--slogan
+        font-size: 30px
+
+
+.section-solution
+    padding: 80px 0
+    .solution
+        grid-template-areas: 'img content'
+        grid-gap: 25px
+        justify-content: center
+        align-items: center
+    .solution-img
+        img
+            max-width: 190px
+    .solution-content
+    
+    .solution--slogan
+        margin-bottom: 20px
+        font-size: 26px
+    
+    .insure
+        max-width: 442px
+        margin-left: 45px
+        h4
+            font-size: 16px
+        span
+            margin-top: 5px
+            font-size: 14px
+    .insure-item:before
+        width: 20px 
+        height: 20px
+        left: -30px
+    .item--mid
+        margin-top: 15px
+        margin-bottom: 15px
+
+
+
+.footer
+    height: 100%
+    margin: 44px auto
+    grid-template-areas: 'info about driver' 'info user support'
+    grid-gap: 30px
+    justify-content: center
+    align-items: stretch
+    justify-items: center
+    align-content: center
+    .footer-info
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        hr
+            display: none
+        .group--info
+            flex: 0 0 200px
+        .group--app
+            flex: 1 1 100px
+
+
