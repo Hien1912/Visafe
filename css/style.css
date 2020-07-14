@@ -586,8 +586,20 @@ header {
 }
 
 .section-feedback .feedback .feedback-quote .quote .rate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 35.5px;
   color: #25AF5F;
+}
+
+.section-feedback .feedback .feedback-quote .quote .rate i {
+  margin-left: 5px;
+  margin-right: 5px;
+  cursor: pointer;
 }
 
 .section-feedback .feedback .feedback-quote .quote .author {
