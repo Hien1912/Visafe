@@ -8,7 +8,6 @@ html, body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  scroll-behavior: smooth;
 }
 
 *, *::after, *::before {
@@ -77,11 +76,15 @@ ul {
 }
 
 header {
+  width: 100%;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   border-bottom: 1px solid #707070;
   max-height: 126px;
   height: 100%;
+  min-height: 60px;
+  top: 0;
+  z-index: 1000;
 }
 
 .vertical-line {
@@ -93,6 +96,7 @@ header {
 }
 
 .header-topbar {
+  width: 100%;
   height: 46px;
   background-color: #25AF5F;
   color: #FFFFFF;
@@ -214,6 +218,9 @@ header {
 }
 
 .header-navbar {
+  min-height: 60px !important;
+  z-index: 1;
+  width: 100%;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -223,6 +230,14 @@ header {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 14px;
+}
+
+.header-navbar .scrolldown {
+  height: 100%;
+}
+
+.header-navbar .scrollup {
+  height: 80px;
 }
 
 .navbar {
@@ -921,7 +936,7 @@ footer .group--social a {
     display: none;
     position: absolute;
     z-index: 90;
-    top: 80px;
+    top: 100%;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -1135,7 +1150,7 @@ footer .group--social a {
     display: none;
     position: absolute;
     z-index: 90;
-    top: 80px;
+    top: 100%;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -1342,7 +1357,7 @@ footer .group--social a {
     display: none;
     position: absolute;
     z-index: 90;
-    top: 80px;
+    top: 100%;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);

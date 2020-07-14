@@ -68,4 +68,3 @@ function hide(e) {
     e.classList.remove("show");
     return e;
 }
-
